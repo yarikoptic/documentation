@@ -1,0 +1,993 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../datamodels/">
+      
+      
+        <link rel="next" href="../term_naming_standards/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
+    
+    
+      
+        <title>Data dictionaries - Neurobagel Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="light-blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#neurobagel-data-dictionaries" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Neurobagel Documentation" class="md-header__button md-logo" aria-label="Neurobagel Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Neurobagel Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data dictionaries
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/neurobagel/documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Neurobagel Documentation" class="md-nav__button md-logo" aria-label="Neurobagel Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Neurobagel Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/neurobagel/documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datamodels/" class="md-nav__link">
+        Data models
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Data dictionaries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Data dictionaries
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#participant-identifier" class="md-nav__link">
+    Participant identifier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-identifier" class="md-nav__link">
+    Session identifier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnosis" class="md-nav__link">
+    Diagnosis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sex" class="md-nav__link">
+    Sex
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#age" class="md-nav__link">
+    Age
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessment-tool" class="md-nav__link">
+    Assessment tool
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../term_naming_standards/" class="md-nav__link">
+        Naming conventions for terms
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          MR Proc user guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          MR Proc user guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mr_proc/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mr_proc/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mr_proc/configs/" class="md-nav__link">
+        Configs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mr_proc/code_org/" class="md-nav__link">
+        Code organization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mr_proc/data_org/" class="md-nav__link">
+        Data organization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+          Workflow
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mr_proc/workflow/dicom_org/" class="md-nav__link">
+        DICOM organization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mr_proc/workflow/bids_conv/" class="md-nav__link">
+        BIDS conversion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6_3" id="__nav_5_6_3_label" tabindex="0">
+          Pipeline specific instructions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_6_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Pipeline specific instructions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mr_proc/workflow/proc_pipe/fmriprep/" class="md-nav__link">
+        fmriprep
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#participant-identifier" class="md-nav__link">
+    Participant identifier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-identifier" class="md-nav__link">
+    Session identifier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnosis" class="md-nav__link">
+    Diagnosis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sex" class="md-nav__link">
+    Sex
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#age" class="md-nav__link">
+    Age
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessment-tool" class="md-nav__link">
+    Assessment tool
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="neurobagel-data-dictionaries">Neurobagel Data Dictionaries</h1>
+<p>The Neurobagel annotator creates a BIDS compatible data dictionary
+and augments the information that BIDS recommends with 
+unambiguous semantic tags.</p>
+<p>Below we'll outline several special cases using the following example <code>participants.tsv</code> file:</p>
+<table>
+<thead>
+<tr>
+<th>participant_id</th>
+<th>session_id</th>
+<th>group</th>
+<th>age</th>
+<th>sex</th>
+<th>updrs_1</th>
+<th>updrs_2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sub-01</td>
+<td>ses-01</td>
+<td>PAT</td>
+<td>25</td>
+<td>M</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>sub-01</td>
+<td>ses-02</td>
+<td>PAT</td>
+<td>26</td>
+<td>M</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr>
+<td>sub-02</td>
+<td>ses-01</td>
+<td>CTL</td>
+<td>28</td>
+<td>F</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>sub-02</td>
+<td>ses-02</td>
+<td>CTL</td>
+<td>29</td>
+<td>F</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Controlled terms in the below examples are shortened using the RDF prefix/context
+syntax for <a href="https://w3c.github.io/json-ld-syntax/#the-context">json-ld</a>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;nb&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://neurobagel.org/vocab/&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;purl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.obolibrary.org/obo/&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;snomed&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.bioontology.org/ontology/SNOMEDCT/&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;cogatlas&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.cognitiveatlas.org/task/id/&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="participant-identifier">Participant identifier</h2>
+<p>Term from the Neurobagel vocabulary.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;participant_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A participant ID&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Annotations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;IsAbout&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">        </span><span class="nt">&quot;TermURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nb:ParticipantID&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">        </span><span class="nt">&quot;Label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Subject Unique Identifier&quot;</span>
+</span><span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>participant_id</code> is a reserved name in BIDS and BIDS data dictionaries
+therefore typically don't annotate this column. Neurobagel supports
+multiple subject ID columns for situations where a study is using more than
+one ID scheme.</p>
+</div>
+<h2 id="session-identifier">Session identifier</h2>
+<p>Term from the Neurobagel vocabulary.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;session_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A session ID&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Annotations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;IsAbout&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">        </span><span class="nt">&quot;TermURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nb:SessionID&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">        </span><span class="nt">&quot;Label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Run Identifier&quot;</span>
+</span><span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unlike the BIDS specification, Neurobagel supports a <code>participants.tsv</code>
+file with a <code>session_id</code> field.</p>
+</div>
+<h2 id="diagnosis">Diagnosis</h2>
+<p>Terms from the <a href="https://browser.ihtsdotools.org/">SNOMED-CT ontology</a> for clinical diagnosis.
+Terms from the National Cancer Institute Thesaurus for healthy control status.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Group variable&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Levels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;PD&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parkinson&#39;s patient&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;CTRL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Control subject&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;Annotations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;IsAbout&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">        </span><span class="nt">&quot;TermURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nb:Diagnosis&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">        </span><span class="nt">&quot;Label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Diagnosis&quot;</span>
+</span><span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;Levels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;PD&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">          </span><span class="nt">&quot;TermURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;snomed:49049000&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">          </span><span class="nt">&quot;Label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parkinson&#39;s disease&quot;</span>
+</span><span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;CTRL&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">          </span><span class="nt">&quot;TermURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;purl:NCIT_C94342&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">          </span><span class="nt">&quot;Label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Healthy Control&quot;</span>
+</span><span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The <code>IsAbout</code> relation uses a term from the Neurobagel namespace because
+<code>"Diagnosis"</code> is a standardized term.</p>
+<h2 id="sex">Sex</h2>
+<p>Terms are from the SNOMED-CT ontology, which has controlled terms aligning with BIDS <code>participants.tsv</code> descriptions for sex.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;sex&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sex variable&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Levels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;M&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Male&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;F&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Female&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;Annotations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;IsAbout&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;TermURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nb:Sex&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sex&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;Levels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;M&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;TermURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;snomed:248153007&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Male&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;F&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;TermURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;snomed:248152002&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Female&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The <code>IsAbout</code> relation uses a Neurobagel scoped term for <code>"Sex"</code> because 
+this is a Neurobagel common data element.</p>
+<h2 id="age">Age</h2>
+<p>Neurobagel has a common data element for <code>"Age"</code> which describes a continuous column. To ensure age values are represented as floats in Neurobagel graphs, Neurobagel encodes the relevant "heuristic" describing the value format of a given age column. This heuristic, stored in the <code>Transformation</code> annotation, corresponds internally to a specific transformation that is used to convert the values to float ages.</p>
+<p>Possible heuristics: </p>
+<table>
+<thead>
+<tr>
+<th>TermURL</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nb:float</td>
+<td>float value</td>
+</tr>
+<tr>
+<td>nb:int</td>
+<td>integer value</td>
+</tr>
+<tr>
+<td>nb:euro</td>
+<td>european decimal value</td>
+</tr>
+<tr>
+<td>nb:bounded</td>
+<td>bounded value</td>
+</tr>
+<tr>
+<td>nb:iso8061</td>
+<td>period of time defined according to the ISO8601 standard</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Participant age&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Annotations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;IsAbout&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;TermURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nb:Age&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Chronological age&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="hll"><span class="w">      </span><span class="nt">&quot;Transformation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="w">        </span><span class="nt">&quot;TermURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nb:euro&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="w">        </span><span class="nt">&quot;Label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;European value decimals&quot;</span>
+</span><span class="hll"><span class="w">      </span><span class="p">}</span>
+</span><span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="assessment-tool">Assessment tool</h2>
+<p>For assessment tools like cognitive tests or rating scales, 
+Neurobagel encodes whether the tool was successfully completed.
+Because assessment tools often have several subscales or items 
+that can be stored as separate columns in the tabular <code>participant.tsv</code> file,
+each assessment tool column gets at least two annotations:</p>
+<ul>
+<li>one to classify it as <code>IsAbout</code> the generic category of assessment tools</li>
+<li>one to classify it as <code>PartOf</code> the specific assessment tool</li>
+</ul>
+<p>An additional annotation <code>MissingValues</code> can be used to specify value(s) in an assessment tool column which represent that the participant is missing a value/response for that subscale, when instances of missing values are present.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;updrs_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;item 1 scores for UPDRS&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Annotations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">      </span><span class="nt">&quot;IsAbout&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span class="w">        </span><span class="nt">&quot;TermURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nb:Assessment&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Assessment tool&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="hll"><span class="w">      </span><span class="nt">&quot;IsPartOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span class="w">        </span><span class="nt">&quot;TermURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cogatlas:tsk_4a57abb949ece&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Unified Parkinson&#39;s Disease Rating Scale&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;updrs_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;item 2 scores for UPDRS&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Annotations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;IsAbout&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;TermURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nb:Assessment&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Assessment tool&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;IsPartOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;TermURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cogatlas:tsk_4a57abb949ece&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Unified Parkinson&#39;s Disease Rating Scale&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="hll"><span class="w">      </span><span class="nt">&quot;MissingValues&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span>
+</span><span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>To determine whether a specific assessment tool is available for a given participant,
+we then combine all of the columns that were classified as <code>PartOf</code> that specific tool
+and then apply a simple <code>all()</code> heuristic to check that none of the columns
+contain any <code>MissingValues</code>.</p>
+<p>For the above example, this would be:</p>
+<table>
+<thead>
+<tr>
+<th>particpant_id</th>
+<th>updrs_1</th>
+<th>updrs_2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sub-01</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>sub-02</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Therefore: </p>
+<table>
+<thead>
+<tr>
+<th>particpant_id</th>
+<th>updrs_available</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sub-01</td>
+<td>False</td>
+</tr>
+<tr>
+<td>sub-02</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>
